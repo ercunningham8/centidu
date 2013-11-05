@@ -1,0 +1,174 @@
+﻿/*
+Main Styles TOC
+     Base Styles
+     Abstract Styles (clearfix, buttons, grid, etc.)
+     Banner (site wide)
+     Footer  (site wide)
+     Content Components  
+*/
+
+// Base Styles
+
+body {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background: url("../img/bg-body.jpg") @body-bg;
+    color: @text-color;
+    font: @font-size-base @font-family-sans-serif;
+}
+
+a {
+    color: @link-color;
+    text-decoration: none;
+}
+a:hover {
+    color: @link-hover-color;
+    text-decoration: underline;
+}
+a:active {
+    color: @link-active-color;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    color: @gray-dark;
+}
+
+
+// Abstract Styles
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Banner Styles
+
+div[role="banner"] {
+    margin: 0 auto 3em;
+}
+
+.logo {
+    background: url("../img/logo.jpg") no-repeat;
+    width: 125px;
+    height: 44px;
+    display:block;
+    text-indent:-9999px;
+    float: left;
+}
+
+nav {
+    float: right;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+    nav a,
+    nav ol {
+        float: left;
+    }
+
+    nav > a,
+    nav ol li > a {
+        padding: 0 20px;
+        border-right: 1px solid @gray-light;
+        text-transform: uppercase;
+    }
+
+        nav > a:last-child,
+        nav ol li:last-child a {
+            border: none;
+        }
+
+    nav a:hover {
+        text-decoration: none;
+    }
+
+    nav a.current {
+        color: @main-color;
+    }
+
+    nav ol li:nth-child(2) {
+        display: none;
+    }
+
+    nav ol:hover li:nth-child(2) {
+        display: block;
+        position: relative;
+    }
+
+.headerWrapper {
+    background: url("../img/bg-header.jpg");
+    border-top: 1px solid @main-color;
+    border-bottom: 1px solid @gray-lighter;
+    padding: 2em 3000px;
+    margin: 2em -3000px;
+}
+
+header {
+    margin: 0 auto 3em; 
+}
+
+header h1 {
+    float: left;
+    border-right: 1px solid @gray-light;
+    padding-right: 2em;
+    margin-right: 2em;
+}
+
+// Footer Styles
+
+
+
+// Content Component Styles
+
+
+.continue {
+    color: @main-color;
+}
+
+.articleWrapper {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 30%;
+}
+
+article {
+    position: relative;
+    margin: 0 0 2em 90px;
+    width: 600px;
+    background: #fff;
+    border-bottom: 1px solid @gray;
+}
+
+    article time {
+        background: url("../img/time.jpg") no-repeat;
+        color: #FFFFFF;
+        height: 75px;
+        left: -90px;
+        padding-top: 12px;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 80px;
+        text-transform: lowercase;
+    }
+
+    article time .date {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
